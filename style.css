@@ -1,0 +1,41 @@
+body {
+  background-color: #04121E;
+  font-family: 'Roboto', sans-serif;
+  color: white; 
+}
+
+p {
+  font-style: italic;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#navbar li a {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+}
+
+/* website title formatted as left navbar */
+#navbar li a.split {
+  float: left;
+  font-size: xx-large;
+  font-family: 'Bowlby One SC', cursive;
+  pointer-events: none;
+}
+
+/* change the color of links on hover */
+#navbar a:hover {
+  background-color: rgb(98, 205, 255);
+  color: black;
+}
+
