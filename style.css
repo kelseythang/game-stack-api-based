@@ -39,3 +39,30 @@ p {
   color: black;
 }
 
+#card-container {
+  margin-left: 40px;
+}
+
+/* border styling including float */
+.cardDetail {
+  border-style: solid;
+  border-color:rgb(98, 205, 255);
+  border-radius: 25px;
+  padding: 20px;
+  float: left;
+  margin: 5px 5px 5px 5px;
+}
+
+.cardDetail:hover {
+  background: rgb(98, 205, 255);
+  opacity: 0.5;
+}
+
+/* global styles for individual cards */ 
+.cardDetail > * {
+  text-align: center;
+}
+.cardImg {
+  height: 150px;
+  width: 250px; 
+}
