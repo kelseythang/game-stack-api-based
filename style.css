@@ -39,12 +39,12 @@ p {
   color: black;
 }
 
-#card-container {
-  margin-left: 40px;
+.main {
+  margin: 20px 20px 20px 20px;
 }
 
 /* border styling including float */
-.cardDetail {
+.cardDefault {
   border-style: solid;
   border-color:rgb(98, 205, 255);
   border-radius: 25px;
@@ -53,16 +53,34 @@ p {
   margin: 5px 5px 5px 5px;
 }
 
-.cardDetail:hover {
-  background: rgb(98, 205, 255);
-  opacity: 0.5;
+.cardDefault:hover {
+  background: rgb(208, 247, 253);
+  opacity: 0.75;
+  color: black;
 }
 
 /* global styles for individual cards */ 
-.cardDetail > * {
+.cardDefault > * {
   text-align: center;
 }
+
 .cardImg {
   height: 150px;
   width: 250px; 
+}
+
+.cardDetail {
+  border-style: solid;
+  border-color:rgb(98, 205, 255);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px 5px 5px 5px;
+  overflow: auto;
+}
+
+.cardDetailImg {
+  height: 200px;
+  width: 350px;
+  padding: 0px 20px 10px 0px;
+  float: left;
 }
