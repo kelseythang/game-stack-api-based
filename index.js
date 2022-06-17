@@ -10,6 +10,7 @@ fetch(`https://rawg.io/api/games?page_size=20?token&key=${apiKey}`)
   .then(res=> res.json())
   .then(data => {
     console.log(data)
+    cardContainer.innerHTML = '';
     renderCard(data);
   })
   .catch(error => console.log('error', error)); 
@@ -18,7 +19,7 @@ fetch(`https://rawg.io/api/games?page_size=20?token&key=${apiKey}`)
 document.addEventListener('DOMContentLoaded', fetchGames);
 
 // form event
-const form = document.querySelector('form');
+const form = document.querySelector('#game-form');
 form.addEventListener('submit', event => {
   event.preventDefault();
   const searchValue = event.target.search.value + ' ';
@@ -58,9 +59,10 @@ function renderCard(data){
       const cardDiv = document.createElement('div');
       const cardTitle = document.createElement('h2');
       const cardImg = document.createElement('img');
-      const cardReleased= document.createElement('p');
+      const cardReleased = document.createElement('p');
       const cardAdd = document.createElement('p');  
       const cardDetails = document.createElement('p');
+      const cardComments = document.createElement('ul');
   
       cardTitle.textContent = game.name;
       cardImg.src = game.background_image;
@@ -68,11 +70,33 @@ function renderCard(data){
       cardImg.classList.add('cardDetailImg');
       cardReleased.textContent = 'Released Date: ' + game.released;
       cardDetails.textContent = `Total Playtime: ${game.playtime} Hours`; 
-      cardAdd.textContent = 'Add a Review';
+      cardAdd.textContent = 'Add a Review:';
+      cardAdd.style.padding = '20px 0px 0px 0px';
+      
+      // dynamic form
+      const commentForm = document.createElement('form');
+      const formInput = document.createElement('input');
+      const formSubmit = document.createElement('input');
+      formInput.setAttribute('type', 'text');
+      formInput.setAttribute('name', 'comment');
+      formSubmit.setAttribute('type', 'submit');
+      formSubmit.setAttribute('value', 'submit');
+      commentForm.append(formInput, formSubmit);
     
+      commentForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const newComment = document.createElement('li');
+        console.log(event.target.comment.value);
+        newComment.textContent = event.target.comment.value;
+        cardComments.appendChild(newComment);
+      });
   
       cardContainer.appendChild(cardDiv);
-      cardDiv.append(cardTitle, cardImg, cardRating, cardDetails, cardAdd);
+      cardDiv.append(cardTitle, cardImg, cardReleased, cardDetails, cardAdd, commentForm, cardComments);
     });
-  });  
+  });   
 } 
+
+// home page event
+const home = document.querySelector('#home');
+home.addEventListener('click', fetchGames);

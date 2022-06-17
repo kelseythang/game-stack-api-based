@@ -30,7 +30,6 @@ p {
   float: left;
   font-size: xx-large;
   font-family: 'Bowlby One SC', cursive;
-  pointer-events: none;
 }
 
 /* change the color of links on hover */
