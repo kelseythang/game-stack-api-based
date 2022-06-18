@@ -31,6 +31,7 @@ p {
   font-size: xx-large;
   font-family: 'Bowlby One SC', cursive;
   margin: 0px 20px 0px 20px;
+  cursor: pointer;
 }
 
 /* change the color of links on hover */
@@ -48,20 +49,17 @@ p {
   border-style: solid;
   border-color:rgb(98, 205, 255);
   border-radius: 25px;
+  transition: box-shadow .3s;
   padding: 20px;
   float: left;
   margin: 5px 5px 5px 5px;
   text-align: center;
 }
 
-/*
-.cardDefault:hover {
-  background: rgb(208, 247, 253);
-  opacity: 0.75;
-  color: black;
-}
 
-*/
+.cardDefault:hover {
+ box-shadow: 0 0 15px rgba(123, 181, 208); 
+}
 
 /* global styles for individual cards */ 
 .cardDefault > * {
