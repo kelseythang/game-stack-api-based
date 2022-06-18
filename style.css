@@ -25,12 +25,12 @@ p {
   font-weight: lighter;
 }
 
-/* website title formatted as left navbar */
+/* website title */
 #home {
   float: left;
   font-size: xx-large;
   font-family: 'Bowlby One SC', cursive;
-  margin: 0px 20px 20px 20px;
+  margin: 0px 20px 0px 20px;
 }
 
 /* change the color of links on hover */
@@ -51,13 +51,17 @@ p {
   padding: 20px;
   float: left;
   margin: 5px 5px 5px 5px;
+  text-align: center;
 }
 
+/*
 .cardDefault:hover {
   background: rgb(208, 247, 253);
   opacity: 0.75;
   color: black;
 }
+
+*/
 
 /* global styles for individual cards */ 
 .cardDefault > * {
@@ -83,4 +87,23 @@ p {
   width: 350px;
   padding: 0px 20px 10px 0px;
   float: left;
+} 
+
+.button {
+  background-color: rgb(98, 205, 255);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
 }

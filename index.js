@@ -36,7 +36,7 @@ function renderCard(data){
     const cardTitle = document.createElement('p');
     const cardImg = document.createElement('img');
     const cardRating = document.createElement('p');
-    const cardAdd = document.createElement('p');  
+    const cardAdd = document.createElement('button');  
     const cardDetails = document.createElement('p');
 
     cardTitle.textContent = game.name;
@@ -47,7 +47,8 @@ function renderCard(data){
     cardDetails.textContent = 'View Details'; 
     cardDetails.style.textDecoration = 'underline';
     cardDetails.classList.add('details');
-    cardAdd.textContent = 'Add to My Collection   ☆';
+    cardAdd.textContent = 'Add to My Collection';
+    cardAdd.classList.add('button');
   
 
     cardContainer.appendChild(cardDiv);
