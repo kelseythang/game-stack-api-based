@@ -47,12 +47,25 @@ function renderCard(data){
     cardDetails.textContent = 'View Details'; 
     cardDetails.style.textDecoration = 'underline';
     cardDetails.classList.add('details');
-    cardAdd.textContent = 'Add to My Collection';
+    cardAdd.textContent = 'Add to Collection';
     cardAdd.classList.add('button');
   
 
     cardContainer.appendChild(cardDiv);
     cardDiv.append(cardTitle, cardImg, cardRating, cardDetails, cardAdd);
+    
+    // add to collection event
+    cardAdd.addEventListener('click', () => {
+      if(cardAdd.textContent === 'Add to Collection'){
+        cardAdd.textContent = 'Added to Collection';
+        cardAdd.classList.remove('button');
+        cardAdd.classList.add('added-button')
+      } else {
+        cardAdd.textContent = 'Add to Collection';
+        cardAdd.classList.remove('added-button');
+        cardAdd.classList.add('button');
+      };
+    });
 
     // game details event 
     cardDetails.addEventListener('click', () => {
