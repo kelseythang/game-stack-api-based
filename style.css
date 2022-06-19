@@ -69,6 +69,7 @@ p {
 .cardImg {
   height: 150px;
   width: 250px; 
+  display: block;
 }
 
 .cardDetail {
@@ -106,7 +107,7 @@ p {
   color: black;
 }
 
-.added-button{
+.added-button {
   background-color: rgb(114, 245, 173);
   border: none;
   border-radius: 4px;
@@ -118,4 +119,23 @@ p {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+}
+
+.delete-button {
+  background-color: rgb(245, 114, 114);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 20px 0px 0px 0px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: white;
+  color: black;
 }
