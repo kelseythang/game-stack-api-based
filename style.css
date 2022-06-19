@@ -67,6 +67,7 @@ p {
 }
 
 .cardImg {
+  border-radius: 8px;
   height: 150px;
   width: 250px; 
   display: block;
@@ -82,10 +83,11 @@ p {
 }
 
 .cardDetailImg {
-  height: 200px;
-  width: 350px;
-  padding: 0px 20px 10px 0px;
-  float: left;
+  border-radius: 8px;
+  height: 300px;
+  width: 430px;
+  margin: 0px 100px 60px 0px;
+  float: right;
 } 
 
 .button {

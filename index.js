@@ -12,7 +12,7 @@ fetch(`https://rawg.io/api/games?page_size=20?token&key=${apiKey}`)
     cardContainer.innerHTML = '';
     renderCard(data);
   })
-  .catch(error => console.log('error', error)); 
+  .catch(error => console.error('Error:', error)); 
 } 
 
 document.addEventListener('DOMContentLoaded', fetchGames);
@@ -94,7 +94,7 @@ function renderCard(data){
       const cardReleased = document.createElement('p');
       const cardAdd = document.createElement('p');  
       const cardDetails = document.createElement('p');
-      const cardComments = document.createElement('ul');
+      const cardComments = document.createElement('div');
   
       cardTitle.textContent = game.name;
       cardImg.src = game.background_image;
@@ -104,27 +104,31 @@ function renderCard(data){
       cardDetails.textContent = `Total Playtime: ${game.playtime} Hours`; 
       cardAdd.textContent = 'Add a Review:';
       cardAdd.style.padding = '20px 0px 0px 0px';
-      
+      const commentTitle = document.createElement('p');
+      commentTitle.textContent = 'Reviews:';
+
       // dynamic form
       const commentForm = document.createElement('form');
-      const formInput = document.createElement('input');
       const formSubmit = document.createElement('input');
-      formInput.setAttribute('type', 'text');
-      formInput.setAttribute('name', 'comment');
+      const formTextArea = document.createElement('textarea');
+
+      formTextArea.setAttribute('rows', '4');
+      formTextArea.setAttribute('cols', '50');
+      formTextArea.setAttribute('name', 'comment');
       formSubmit.setAttribute('type', 'submit');
       formSubmit.setAttribute('value', 'submit');
-      commentForm.append(formInput, formSubmit);
+      commentForm.append(formTextArea, formSubmit);
     
       commentForm.addEventListener('submit', event => {
         event.preventDefault();
-        const newComment = document.createElement('li');
-        console.log(event.target.comment.value);
-        newComment.textContent = event.target.comment.value;
+        const newComment = document.createElement('p');
+        const timeStamp = `${new Date().toLocaleDateString('en-US')} ${new Date().toLocaleTimeString('en-US')}`;
+        newComment.textContent = `[${timeStamp}]  ${event.target.comment.value}`;
         cardComments.appendChild(newComment);
       });
   
       cardContainer.appendChild(cardDiv);
-      cardDiv.append(cardTitle, cardImg, cardReleased, cardDetails, cardAdd, commentForm, cardComments);
+      cardDiv.append(cardTitle, cardImg, cardReleased, cardDetails, cardAdd, commentForm, commentTitle, cardComments);
     });
   });   
 } 
