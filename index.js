@@ -129,9 +129,11 @@ function renderCard(data){
   });   
 } 
 
-// home page event
+// home and title page events
 const home = document.querySelector('#home');
+const titleSearch = document.querySelector('#search-titles');
 home.addEventListener('click', fetchGames);
+titleSearch.addEventListener('click', fetchGames);
 
 // my collection event
 const myCollection = document.querySelector('#my-collection');
