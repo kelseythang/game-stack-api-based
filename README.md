@@ -13,6 +13,7 @@ Future updates will include:
 * The expansion of 'View Details'
 * The ability to search by genre
 * Automatic refesh of DOM when games are deleted
+* Higher quality GIFs for READme
 
 ## Contributing
 
