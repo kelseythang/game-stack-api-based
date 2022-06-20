@@ -9,11 +9,11 @@ Game Stack utilizes two APIs (RAWG and Google Fonts) to showcase thousands of ga
 
 ## Project Preview
 On Hover Effects <br>
-![Main](/readme/main.gif) <br>
+![Main](/readme/main.gif) <br><br><br>
 Adding Games to Collection <br>
-![Adding Games](/readme/adding.gif) <br>
+![Adding Games](/readme/adding.gif) <br><br><br>
 Deleting Games from Collection <br>
-![Deleting Games](/readme/deleting.gif) <br>
+![Deleting Games](/readme/deleting.gif) <br><br><br>
 
 ## Enhancements
 
