@@ -8,10 +8,12 @@ Game Stack utilizes two APIs (RAWG and Google Fonts) to showcase thousands of ga
 [Google Fonts API](https://developers.google.com/fonts): Simple to Use Web Fonts
 
 ## Project Preview
-
-![Main](/readme/main.gif)
-![Adding Games](/readme/adding.gif)
-![Deleting Games](/readme/deleting.gif)
+On Hover Effects <br>
+![Main](/readme/main.gif) <br>
+Adding Games to Collection <br>
+![Adding Games](/readme/adding.gif) <br>
+Deleting Games from Collection <br>
+![Deleting Games](/readme/deleting.gif) <br>
 
 ## Enhancements
 
