@@ -10,10 +10,15 @@ Game Stack utilizes two APIs (RAWG and Google Fonts) to showcase thousands of ga
 ## Project Preview
 
 ![Main](/readme/main.gif)
+![Adding Games](/readme/adding.gif)
+![Deleting Games](/readme/deleting.gif)
 
 ## Enhancements
 
-Future updates will include the expansion of 'View Details' and the ability to search by genre.
+Future updates will include:
+* The expansion of 'View Details'
+* The ability to search by genre
+* Automatic refesh of DOM when games are deleted
 
 ## Contributing
 
