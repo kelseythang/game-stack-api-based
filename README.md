@@ -7,14 +7,6 @@ Game Stack utilizes two APIs (RAWG and Google Fonts) to showcase thousands of ga
 [RAWG API](https://rawg.io/apidocs): Online Video Game Database <br>
 [Google Fonts API](https://developers.google.com/fonts): Simple to Use Web Fonts
 
-## Project Preview
-On Hover Effects <br>
-![Main](/readme/main.gif) <br><br><br>
-Adding Games to Collection <br>
-![Adding Games](/readme/adding.gif) <br><br><br>
-Deleting Games from Collection <br>
-![Deleting Games](/readme/deleting.gif) <br><br><br>
-
 ## Enhancements
 
 Future updates will include:
@@ -26,3 +18,10 @@ Future updates will include:
 
 No pull requests are allowed on this project. 
 
+## Project Preview
+On Hover Effects <br>
+![Main](/readme/main.gif) <br><br>
+Adding Games to Collection <br>
+![Adding Games](/readme/adding.gif) <br><br>
+Deleting Games from Collection <br>
+![Deleting Games](/readme/deleting.gif) <br><br>
