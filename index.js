@@ -150,7 +150,7 @@ fetch(`http://localhost:3000/games/`)
     cardContainer.innerHTML = '';
     data.map(games => renderMyCards(games))
   })
-  .catch(error => console.log('error', error)); 
+  .catch(error => console.error('Error:', error));  
 } 
 
 function renderMyCards(games) {
@@ -169,7 +169,7 @@ function renderMyCards(games) {
 
     cardContainer.appendChild(cardDiv);
     cardDiv.append(cardTitle, cardImg, deleteBtn);
-};
+}
 
 function handleDelete(event) {
   fetch(`http://localhost:3000/games/`) 
@@ -189,5 +189,5 @@ function handleDelete(event) {
         };
       });
     });
-};
+}
 
